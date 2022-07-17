@@ -1,13 +1,13 @@
 import React from 'react';
-import {View,Text} from "react-native";
+import { Provider } from 'react-redux';
+import {store} from "./src/Redux/Store/store";
+import Routs from "./src/Routes/Routes";
 
 const App =() =>{
   return(
-    <View>
-      <Text>
-        Todo list
-      </Text>
-    </View>
+    <Provider store={store}>
+      <Routs/>
+    </Provider>
   )
 }
 export default App
